@@ -1,0 +1,2 @@
+# CloudForMate
+AWS CloudFormating
