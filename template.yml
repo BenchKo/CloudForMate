@@ -31,6 +31,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Allow HTTP access via my IP address
+      VpcId: vpc-019458912313f6c31
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 80
@@ -42,6 +43,7 @@ Resources:
     Properties:
       ImageId: !Ref LatestAmiId
       InstanceType: !Ref InstanceType
+      SubnetId: subnet-05eb0edec44996c9a
       SecurityGroupIds:
         - !Ref WebServerSecurityGroup
       UserData: !Base64 |
