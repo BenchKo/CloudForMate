@@ -2,6 +2,9 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: CloudFormation Template for WebServer with Security Group and EC2 Instance
 
 Parameters:
+  ForceUpdate:
+    Type: String
+    Description: Trigger für erzwungenes Update
   LatestAmiId:
     Description: The latest Amazon Linux 2 AMI from the Parameter Store
     Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
@@ -58,8 +61,7 @@ Outputs:
       - - http://
         - !GetAtt WebServer.PublicDnsName
     Description: Website URL
-  SyncTimestamp:
-    Description: Dummy output to force update
-    Value: !Sub "${AWS::Timestamp}"
+  Trigger:
+    Value: !Ref ForceUpdate
 
 
