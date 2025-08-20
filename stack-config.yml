@@ -1,3 +1,4 @@
 template-file-path: template.yml
-parameters: {}
+parameters:
+  Update: Lol
 tags: {}
