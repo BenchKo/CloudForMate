@@ -1,0 +1,19 @@
+template-file-path: cheatSheet.yml
+parameters:
+  AppDNSName: ''
+  AppRunnerPrivateWorkloads: ''
+  EnvironmentName: test
+  AppDNSDelegationRole: ''
+  ServiceDiscoveryEndpoint: test.cheatsheet-app.local
+  NATWorkloads: ''
+  EFSWorkloads: ''
+  Aliases: ''
+  CreateHTTPSListener: 'false'
+  AppName: cheatsheet-app
+  ALBWorkloads: ''
+  ToolsAccountPrincipalARN: arn:aws:iam::577885025853:root
+  CreateInternalHTTPSListener: 'false'
+  InternalALBWorkloads: ''
+tags:
+  copilot-application: cheatsheet-app
+  copilot-environment: test
