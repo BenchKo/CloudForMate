@@ -58,4 +58,8 @@ Outputs:
       - - http://
         - !GetAtt WebServer.PublicDnsName
     Description: Website URL
+  SyncTimestamp:
+    Description: Dummy output to force update
+    Value: !Sub "${AWS::Timestamp}"
+
 
